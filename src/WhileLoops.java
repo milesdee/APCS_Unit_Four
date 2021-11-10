@@ -11,8 +11,16 @@ public class WhileLoops {
      * @return A string consisting of either the range of numbers or Invalid Input
      */
     public static String fromHereToThere(int num1, int num2) {
+        String nums = "";
+        if (num1 < num2){
+            while (num1 <= num2){
+                nums += num1 + " ";
+                num1 += 1;
+            }
+        }
+        else nums = "Invalid input";
 
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        return nums;
     }
 
     /**
@@ -21,8 +29,18 @@ public class WhileLoops {
      * @return - A string showing how many positive and negative numbers were entered by the user.
      */
     public static String countPosAndNeg() {
-
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        boolean quit = false;
+        Scanner scan = new Scanner(System.in);
+        int posCount = 0;
+        int negCount = 0;
+        while (!quit){
+            System.out.print("Enter a positive or negative number, or 0 to quit: ");
+            int x = scan.nextInt();
+            if (x > 0) posCount += 1;
+            else if (x < 0) negCount += 1;
+            else quit = true;
+        }
+        return "There were " + posCount + " positive and " + negCount + " negative numbers"; // update or remove this line. It is only there so the tests do not show an error.
     }
 
     /**
@@ -31,8 +49,9 @@ public class WhileLoops {
      * @return A string giving the minimum and maximum. Ex. "The Max value is: 45\nThe Min value is: -87"
      */
     public static String findMinAndMax() {
+        Scanner scan = new Scanner(System.in);
 
-       return ""; // update or remove this line. It is only there so the tests do not show an error.
+        return ""; // update or remove this line. It is only there so the tests do not show an error.
     }
 
     /**
@@ -46,5 +65,8 @@ public class WhileLoops {
         return ""; // update or remove this line. It is only there so the tests do not show an error.
     }
 
+    public static void main(String[] args) {
+        System.out.println(WhileLoops.countPosAndNeg());
+    }
 
 }
