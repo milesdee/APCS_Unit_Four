@@ -40,7 +40,7 @@ public class WhileLoops {
             else if (x < 0) negCount += 1;
             else quit = true;
         }
-        return "There were " + posCount + " positive and " + negCount + " negative numbers"; // update or remove this line. It is only there so the tests do not show an error.
+        return "There were " + posCount + " positive and " + negCount + " negative numbers";
     }
 
     /**
@@ -50,8 +50,17 @@ public class WhileLoops {
      */
     public static String findMinAndMax() {
         Scanner scan = new Scanner(System.in);
-
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        int e = 0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        while(e < 5){
+            System.out.print("Number: ");
+            int input = scan.nextInt();
+            if(input > max) max = input;
+            if(input < min) min = input;
+            e++;
+        }
+        return "Max value is: " + max + ". Min value is: " + min;
     }
 
     /**
@@ -61,12 +70,17 @@ public class WhileLoops {
      * Ex. factors(12) returns "The factors of 12 are: 1 2 3 4 6 12 "
      */
     public static String factors(int num) {
-
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        int t = num;
+        String factors = "";
+        while (t > 0) {
+            if(num % t == 0) factors += (num/t) + " ";
+            t--;
+        }
+        return "The factors of " + num + " are: " + factors;
     }
 
     public static void main(String[] args) {
-        System.out.println(WhileLoops.countPosAndNeg());
+        System.out.println(WhileLoops.factors(12));
     }
 
 }
