@@ -70,17 +70,40 @@ public class WhileLoops {
      * Ex. factors(12) returns "The factors of 12 are: 1 2 3 4 6 12 "
      */
     public static String factors(int num) {
-        int t = num;
+        int test = num;
         String factors = "";
-        while (t > 0) {
-            if(num % t == 0) factors += (num/t) + " ";
-            t--;
+        while (test > 0) {
+            if(num % test == 0) factors += (num/test) + " ";
+            test--;
         }
         return "The factors of " + num + " are: " + factors;
     }
 
+    public static double gradePoint() {
+        Scanner scan = new Scanner(System.in);
+        int inputCount = 0;
+        double gpa = 0;
+        while (inputCount < 7) {
+            System.out.print("Enter a thingy: ");
+            String input = scan.nextLine().toLowerCase();
+            if(input.equals("a")) gpa += 4;
+            else if(input.equals("b")) gpa += 3;
+            else if(input.equals("c")) gpa += 2;
+            else if(input.equals("d")) gpa += 1;
+            else if(input.equals("f")) gpa += 0;
+            else{
+                System.out.println("No. Try again: ");
+                inputCount--;
+            }
+            inputCount++;
+        }
+        gpa = (double)((int)((gpa/7*100) + 0.5)) / 100;
+
+        return gpa;
+    }
+
     public static void main(String[] args) {
-        System.out.println(WhileLoops.factors(12));
+        System.out.println(gradePoint());
     }
 
 }

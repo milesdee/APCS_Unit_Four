@@ -88,19 +88,19 @@ public class WhileLoopsTests {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    void gradePointTest1() throws IOException {
-//        System.setIn(new FileInputStream("data/grades1.txt"));
-//        double expected = 2.57;
-//        double actual = WhileLoops.gradePoint();
-//        assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    void gradePointTest2() throws IOException {
-//        System.setIn(new FileInputStream("data/grades2.txt"));
-//        double expected = 2.43;
-//        double actual = WhileLoops.gradePoint();
-//        assertEquals(expected, actual);
-//    }
+    @Test
+    void gradePointTest1() throws IOException {
+        System.setIn(new FileInputStream("data/grades1.txt"));
+        double expected = 2.57;
+        double actual = WhileLoops.gradePoint();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void gradePointTest2() throws IOException {
+        System.setIn(new FileInputStream("data/grades2.txt"));
+        double expected = 2.43;
+        double actual = WhileLoops.gradePoint();
+        assertEquals(expected, actual);
+    }
 }
