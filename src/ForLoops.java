@@ -8,8 +8,9 @@ public class ForLoops {
      * @return A string of hashtags
      */
     public static String printingHashTags(int num) {
-
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        String hashes = "";
+        for (int i = 0; i < num; i++) hashes += "#";
+        return hashes;
     }
 
     /**
@@ -21,9 +22,38 @@ public class ForLoops {
      * @return a countdown from the largest parameter to the smallest.
      */
     public static String countDown(int num1, int num2) {
-
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        int a, b;
+        String countDown = "";
+        if (num1 > num2) {
+            a = num1;
+            b = num2;
+        }
+        else {
+            a = num2;
+            b = num1;
+        }
+        for(int i = a; i >= b; i--) countDown += i + " ";
+        return countDown;
+    }
+    public static int sumNumbers(int num1, int num2) {
+        int a, b;
+        int sum = 0;
+        if (num1 > num2) {
+            a = num1;
+            b = num2;
+        }
+        else {
+            a = num2;
+            b = num1;
+        }
+        for(int i = a; i >= b; i--) sum += i;
+        return sum;
     }
 
+    public static int power(int num1, int num2){
+        int ans = num1;
+        for(int i = 1; i < num2; i++) ans *= num1;
+        return ans;
+    }
 
 }

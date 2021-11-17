@@ -54,15 +54,15 @@ public class StringProblemsTests {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    void isPalindromeTrue() {
-//        assertTrue(StringProblems.isPalindrome("kayak"));
-//        assertTrue(StringProblems.isPalindrome("Was it a car or a cat I saw"));
-//    }
-//
-//    @Test
-//    void isPalindromeFalse() {
-//        assertFalse(StringProblems.isPalindrome("stressed"));
-//        assertFalse(StringProblems.isPalindrome("A man a plan a canal nam a"));
-//    }
+    @Test
+    void isPalindromeTrue() {
+        assertTrue(StringProblems.isPalindrome("kayak"));
+        assertTrue(StringProblems.isPalindrome("Was it a car or a cat I saw"));
+    }
+
+    @Test
+    void isPalindromeFalse() {
+        assertFalse(StringProblems.isPalindrome("stressed"));
+        assertFalse(StringProblems.isPalindrome("A man a plan a canal nam a"));
+    }
 }
