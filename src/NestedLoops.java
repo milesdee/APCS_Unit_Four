@@ -35,13 +35,19 @@ public class NestedLoops {
     }
     public static String sideways() {
         String ans = "";
-        for(int y = 5; y > 0; y--){
-            for (int x = 1; x < 5; x++){
-                for(int i = 0; i < 5; i++){
-                    if (x >= y) ans += (i + 1);
-                    else ans += " ";
-                    ans += " ";
-                }
+        for(int y = 2; y <= 6; y++){
+            for(int x = 5; x > 0; x--){
+                if(x < y && x != 1) ans += x + " ";
+                else if(x == 1) ans += x;
+                else ans += "  ";
+            }
+            ans += "\n";
+        }
+        for(int y = 5; y > 1; y--){
+            for(int x = 5; x > 0; x--){
+                if(x < y && x != 1) ans += x + " ";
+                else if(x == 1) ans += x;
+                else ans += "  ";
             }
             ans += "\n";
         }
