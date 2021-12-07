@@ -34,8 +34,10 @@ public class disemvowelment {
         System.out.print("Enter your phrase: ");
         String userInput = scan.nextLine();
         String mods = disemvoweled(userInput);
-        System.out.println("The disemvoweled phrase is: " + mods);
-        mods = repeatChopping(mods);
-        System.out.println("The phrase without double letters is: " + mods);
+        System.out.println( "The disemvoweled phrase is: " + mods + ", with a reduction of " + (double)(100 -(
+                ( 100 * mods.length() ) / userInput.length())) + " percent.");
+        String mods2 = repeatChopping(mods);
+        System.out.println("The phrase without double letters is: " + mods2 + ", with a reduction of " + (double)(100 -(
+                ( 100 * mods2.length() ) / mods.length())) + " percent.");
     }
 }
